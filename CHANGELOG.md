@@ -1,4 +1,4 @@
-## <0.1.0> - <09/11/2023>
+## <0.0.1> - <09/11/2023>
 
 ### Sprint learnings
 
@@ -11,10 +11,25 @@
 
 ### Changed
 
-
 ### Fixed
 
+### Removed
 
+## <0.0.2> - <10/11/2023>
+
+### Sprint learnings
+
+# Aprendí a realizar interacciones en figma, terminando así el prototipo de alta fidelidad.
+# Estuve leyendo de cómo usar HTML y CSS con REACT
+# Configuré ESLint para REACT/Typescript
+# Cree/configuré package.json
+# Configuré jest
+
+### Added
+
+### Changed
+
+### Fixed
 
 ### Removed
 

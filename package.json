@@ -19,8 +19,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test": "jest",
+    "lint": "eslint . --ext .tsx",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +42,23 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaharaiR/DEV010-movie-challenge-fw.git"
+  },
+  "keywords": [
+    "react",
+    "typescript"
+  ],
+  "author": "ISC Saharai Rodriguez Hernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SaharaiR/DEV010-movie-challenge-fw/issues"
+  },
+  "homepage": "https://github.com/SaharaiR/DEV010-movie-challenge-fw#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.8",
+    "jest": "^29.7.0"
   }
 }
