@@ -8,6 +8,8 @@
 # Configuré ESLint para REACT/Typescript
 # Cree/configuré package.json
 # Configuré jest
+# Definí jerarquías de componentes
+# Leí documentación de PROPS
 
 ### Added
 
