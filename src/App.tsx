@@ -1,4 +1,17 @@
-import { useState } from 'react'
+import React from 'react';
+import logo from './assets/palmolita.png';
+
+  const App: React.FC = () => {
+    return (
+      <div>
+        {<img src={logo} alt="Logo palmolita" />} 
+      </div>  
+    );
+  }
+
+  export default App;
+
+/* import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -32,4 +45,4 @@ function App() {
   )
 }
 
-export default App
+export default App */
