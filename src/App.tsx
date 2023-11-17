@@ -1,10 +1,16 @@
 import React from 'react';
-import logo from './assets/palmolita.png';
+import { getAnimatedMovies } from './connectAPI';
+import MenuBar from '../components/MenuBar';
+import FooterInfo from '../components/FooterInfo';
 
   const App: React.FC = () => {
+    getAnimatedMovies().then(animatedMovies => {
+      console.log(animatedMovies);
+    });
     return (
       <div>
-        {<img src={logo} alt="Logo palmolita" />} 
+        <MenuBar/ >
+        <FooterInfo/ >
       </div>  
     );
   }
