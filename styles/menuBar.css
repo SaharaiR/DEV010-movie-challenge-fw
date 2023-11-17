@@ -1,0 +1,45 @@
+:root{
+    --azure: #01ABAA;
+    --light-azure: #98D8AA;
+    --lucky: 'Luckiest Guy', cursive;
+    --varela: 'Varela Round', sans-serif;
+}
+
+img{
+    height: 180px;
+    width: 180px;
+}
+
+h1{
+    font-family: var(--lucky);
+    font-size: 50px;
+    position: relative;
+    margin-left: 200px;
+    margin-top: -150px;
+}
+
+select {
+    appearance: none;
+    font-family: var(--varela);
+    font-size: 25px;
+    margin-top: -30px;
+    border-radius: 10px;
+    background-color: var(--light-azure);
+}
+
+select option {
+    font-family: var(--varela);
+    font-size: 18px;
+}
+
+select:hover{
+    background-color: var(--azure);
+}
+
+#menuGender{
+    margin-left: 250px;
+}
+
+#menuOrder{
+    margin-left: 230px;
+}

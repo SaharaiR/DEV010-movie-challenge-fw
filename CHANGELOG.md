@@ -1,4 +1,4 @@
-## <0.0.1> - <08/11/2023>
+## <0.0.1> - <08/11/2023 - 15/11/2023>
 
 ### Sprint learnings
 
@@ -20,8 +20,32 @@
 # home.css
 # jest.config.js
 # .eslintrc.json
+# Archivos en carpeta assets (background, buttonBack, palmolita, palmolitas, palmolita)
 
 ### Changed
+
+### Fixed
+
+### Removed
+
+
+## <0.0.2> - <15/11/2023 - 22/11/2023>
+
+### Sprint learnings
+
+# Creación de componentes de vista 1
+# Diseño de CSS de vista 1
+# Se hizo la conexion a la API, de forma exitosa (comprobando por console.log la informacion recibida)
+
+### Added
+
+# Archivos de componentes (menuBar, gridMovies, navBar) 
+# Archivos de CSS de los componentes
+# Archivo de conexión a la API
+
+### Changed
+
+# Archivo App.tsx
 
 ### Fixed
 
