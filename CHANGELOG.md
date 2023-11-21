@@ -36,6 +36,9 @@
 # Creación de componentes de vista 1
 # Diseño de CSS de vista 1
 # Se hizo la conexion a la API, de forma exitosa (comprobando por console.log la informacion recibida)
+# Uso de interface para definir los tipos de props a recibir
+# Pude presentar el componente de PosterMovie y el GridMovies, me marca un error que no entiendo bien, pero presenta imágenes e información
+# Diferencias entre tsx y ts
 
 ### Added
 

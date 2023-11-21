@@ -1,12 +1,20 @@
 // import React from 'react';
 import '../styles/postermovie.css'
 
-/* function PosterMovie({ imageURL, movieName, yearMovie} : MovieProps) {
-    return (
-        <section className='poster'>
+interface MovieProps{
+  imageURL: string;
+  nameMovie: string;
+  yearMovie: string;
+}
+
+function PosterMovie({imageURL,nameMovie: movieName,yearMovie} : MovieProps) {
+      return (
+        <picture className='poster'>
             <img src = {imageURL} alt=''/>
-            <h4>{movieName}</h4>
-            <p>{yearMovie}</p>
-        </section>
-    )
-} */
+            <figcaption>{movieName}</figcaption>
+            <span>{yearMovie}</span>
+        </picture>
+      )
+}
+
+export default PosterMovie;

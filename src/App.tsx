@@ -1,17 +1,17 @@
 import React from 'react';
-import { getAnimatedMovies } from './connectAPI';
 import MenuBar from '../components/MenuBar';
+import GridMovies from '../components/GridMovies';
 import FooterInfo from '../components/FooterInfo';
+import MenuNav from '../components/NavBar';
 
   const App: React.FC = () => {
-    getAnimatedMovies().then(animatedMovies => {
-      console.log(animatedMovies);
-    });
     return (
       <div>
         <MenuBar/ >
+        <GridMovies/ >
+        <MenuNav />
         <FooterInfo/ >
-      </div>  
+      </div>
     );
   }
 

@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "components/FooterInfo.tsx"],
+  "include": ["src", "components/FooterInfo.tsx", "components/NavBar.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
