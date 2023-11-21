@@ -15,16 +15,17 @@ const GridMovies = () => {
 
     useEffect(() => {
         getAnimatedMovies().then((data) => {
-          setMovies(data.results);  // data is also Movie[] type
+          setMovies(data.results);
         });  
       }, []);
-
+      
     return (
       <div className='gridMovies'> 
         {movies.map((movie) => {
           return (
-            <PosterMovie           
-              key={movie.id}
+            <PosterMovie
+              key={movie.id}           
+              idMovie={movie.id}
               imageURL={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
               nameMovie={movie.title}
               yearMovie={movie.release_date}  

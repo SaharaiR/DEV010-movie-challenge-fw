@@ -1,6 +1,7 @@
 const API_KEY = 'ccedb42a54c3ee36b2d505f569a4b95f';
 
 interface Movie {
+    id: string;
     title: string;
     poster_path: string;
     release_date: string;

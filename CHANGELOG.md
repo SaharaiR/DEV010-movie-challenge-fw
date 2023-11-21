@@ -39,6 +39,10 @@
 # Uso de interface para definir los tipos de props a recibir
 # Pude presentar el componente de PosterMovie y el GridMovies, me marca un error que no entiendo bien, pero presenta imágenes e información
 # Diferencias entre tsx y ts
+# Cambié paleta de colores
+# Resolví el error que me marcaba de los componentes
+# Diseño de CSS para el poster de la pelicula
+# Empezando a ver la manera de paginar
 
 ### Added
 
@@ -49,7 +53,10 @@
 ### Changed
 
 # Archivo App.tsx
+# Archivo de imagen del logo
 
 ### Fixed
 
 ### Removed
+
+# Borré archivo de app.css 
