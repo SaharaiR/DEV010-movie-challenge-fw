@@ -1,0 +1,44 @@
+:root{
+    --yellow: #F7D060;
+    --ligth-yellow: #F3E99F;
+    --varela: 'Varela Round', sans-serif;
+}
+.menuNav{
+    text-align: center;
+}
+
+button{
+    background-color: var(--yellow);
+    font-family: var(--varela);
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px 24px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btnLast span::after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+button:hover span{
+    background-color: var(--ligth-yellow);
+    padding-right: 25px;
+}
