@@ -2,16 +2,17 @@
 import '../styles/postermovie.css'
 
 interface MovieProps{
+  idMovie: string;
   imageURL: string;
   nameMovie: string;
   yearMovie: string;
 }
 
-function PosterMovie({imageURL,nameMovie: movieName,yearMovie} : MovieProps) {
+function PosterMovie({idMovie, imageURL, nameMovie, yearMovie} : MovieProps) {
       return (
         <picture className='poster'>
-            <img src = {imageURL} alt=''/>
-            <figcaption>{movieName}</figcaption>
+            <img id={idMovie} src = {imageURL} alt='Poster movie' className='posterMovie'/>
+            <figcaption>{nameMovie}</figcaption>
             <span>{yearMovie}</span>
         </picture>
       )
