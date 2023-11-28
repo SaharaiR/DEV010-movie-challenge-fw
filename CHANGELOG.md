@@ -73,7 +73,7 @@
 
 ### Changed
 
-# 
+# Cambié la función de conexión a la API, para ocultar mi API KEY (connectAPI.ts)
 
 ### Fixed
 
