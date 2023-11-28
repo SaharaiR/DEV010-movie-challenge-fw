@@ -74,6 +74,7 @@
 ### Changed
 
 # Cambié la función de conexión a la API, para ocultar mi API KEY (connectAPI.ts)
+# Cambié a App.tsx el llamado a la función de paginación (inicialmente estaba en GridMovies.tsx) para dejar solo la lógica de presentar los posters ahí
 
 ### Fixed
 
