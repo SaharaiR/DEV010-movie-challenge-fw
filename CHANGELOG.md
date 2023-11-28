@@ -65,15 +65,15 @@
 
 ### Sprint learnings
 
-# 
+# Se agregó la función para paginar, por alguna razón ya no agarro el archivo de CSS 
 
 ### Added
 
-# 
+# Archivo pagination.tsx
 
 ### Changed
 
-# 
+# Cambié la función de conexión a la API, para ocultar mi API KEY (connectAPI.ts)
 
 ### Fixed
 
