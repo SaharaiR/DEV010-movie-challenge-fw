@@ -2,9 +2,8 @@
     --yellow: #F7D060;
     --ligth-yellow: #F3E99F;
     --varela: 'Varela Round', sans-serif;
-    --b: 3px;   /* border thickness */
-    --s: .15em; /* size of the corner */
-    /* --c: #BD5532;*/
+    --b: 3px;   /* borde */
+    --s: .15em; /* tamaño de la esquina */
     --c: #CCA059;
     --azure: #01ABAA;
     --cream: #DED1C9;
@@ -16,11 +15,13 @@
     --purple: #46135C;
 }
 .menuNav{
+    width: 100%;
     text-align: center;
     margin-top: 25px;
 }
 
- .button{
+ .buttons{
+    width: auto;
     text-decoration: none;
     font-family: var(--varela);
     font-weight: bold;
@@ -39,13 +40,13 @@
     outline-offset: .2em;
 }
 
-.button:hover,
-.button:focus-visible{
+.buttons:hover,
+.buttons:focus-visible{
   --_p: 0px;
   outline-color: var(--c);
   outline-offset: .05em;
 }
-.button:active {
+.buttons:active {
   background: var(--c);
   color: #fff;
 }

@@ -33,13 +33,11 @@ interface PaginationProps {
     }
   
     return (
-      <div>
         <MenuNav
           onFirstPage={handleFirstPage}
           onPrevPage={handlePrevPage}
           onNextPage={handleNextPage}
           onLastPage={handleLastPage}  
         />
-      </div>
     );
   }

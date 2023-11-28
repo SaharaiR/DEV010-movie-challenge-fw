@@ -14,10 +14,10 @@ interface MenuNavProps {
        onLastPage
      }: MenuNavProps) => {
          return <section className="menuNav">
-                   <button onClick={onFirstPage}>Primero</button>
-                   <button onClick={onPrevPage}>Anterior</button>
-                   <button onClick={onNextPage}>Siguiente</button>
-                   <button onClick={onLastPage}>Último</button>
+                   <button onClick={onFirstPage} className='buttons'>Primero</button>
+                   <button onClick={onPrevPage} className='buttons'>Anterior</button>
+                   <button onClick={onNextPage} className='buttons'>Siguiente</button>
+                   <button onClick={onLastPage} className='buttons'>Último</button>
             </section>;
      }
 

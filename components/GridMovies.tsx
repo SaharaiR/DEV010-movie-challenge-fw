@@ -1,7 +1,6 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react';
 import { getAnimatedMovies } from '../src/connectAPI'
 import PosterMovie from '../components/PosterMovie';
-import Pagination from '../src/pagination';
 import '../styles/gridMovies.css';
 
 interface Movie {
@@ -11,27 +10,19 @@ interface Movie {
     release_date: string;
   }
 
-const GridMovies = () => {
-    const [movies, setMovies] = useState<Movie[]>([]);
-    const [page, setPage] = useState(1); //nuevo
-    const [currentPage, setCurrentPage] = useState(1);
+interface GridMoviesProps{
+  page: number;
+}
 
-    /*useEffect(() => {
-        getAnimatedMovies().then((data) => {
-        setMovies(data.results);
-        });  
-      }, []);*/
+const GridMovies = ({ page }: GridMoviesProps) => {
+    const [movies, setMovies] = useState<Movie[]>([]);
+
       useEffect(() => {
         getAnimatedMovies(page)
           .then(data => {
             setMovies(data.results); 
-            setCurrentPage(page);
           })
       }, [page]);
-      
-      function handlePageChange(nextPage: number) {
-        setPage(nextPage);
-      }
 
     return (
       <div className='gridMovies'>
@@ -46,16 +37,17 @@ const GridMovies = () => {
             />   
           );
         })}
-        <Pagination
-          currentPage={currentPage}
-          onPageChange={handlePageChange} 
-        />
       </div>  
     );   
 };
 
 export default GridMovies;
 
+
+/*<Pagination
+          currentPage={currentPage}
+          onPageChange={handlePageChange} 
+        /> */
 /*getAnimatedMovies().then(animatedMovies => {
         //console.log(animatedMovies);
         //const page = animatedMovies.page;
@@ -65,4 +57,10 @@ export default GridMovies;
                             nameMovie={movie.title}
                             yearMovie={movie.release_date}
                 });
-            }  */
+            }  
+            
+             /*useEffect(() => {
+        getAnimatedMovies().then((data) => {
+        setMovies(data.results);
+        });  
+      }, []);*/

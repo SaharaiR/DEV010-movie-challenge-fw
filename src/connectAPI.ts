@@ -1,5 +1,3 @@
-//const page = 1;
-
 interface Movie {
     id: string;
     title: string;
