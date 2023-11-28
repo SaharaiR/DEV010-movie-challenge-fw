@@ -65,11 +65,11 @@
 
 ### Sprint learnings
 
-# 
+# Se agregó la función para paginar, por alguna razón ya no agarro el archivo de CSS 
 
 ### Added
 
-# 
+# Archivo pagination.tsx
 
 ### Changed
 
