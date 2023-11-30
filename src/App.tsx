@@ -1,9 +1,8 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
-import MenuBar from '../components/MenuBar';
-import GridMovies from '../components/GridMovies';
+import MenuBar from './components/MenuBar';
+import GridMovies from './components/GridMovies';
 import Pagination from '../src/pagination';
-import FooterInfo from '../components/FooterInfo';
 
   const App: React.FC = () => {
     const [page, setPage] = useState(1); //nuevo
@@ -24,7 +23,9 @@ import FooterInfo from '../components/FooterInfo';
           currentPage={currentPage}
           onPageChange={handlePageChange} 
         />
-        <FooterInfo/ >
+        <footer>
+          <p>Desarrollado por: ISC Saharai Rodríguez Hernández</p>
+        </footer>
       </div>
     );
   }

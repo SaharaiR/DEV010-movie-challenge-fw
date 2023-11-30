@@ -1,4 +1,4 @@
-import MenuNav from '../components/NavBar';
+import MenuNav from './components/NavBar';
 
 const totalPages = 10;
 

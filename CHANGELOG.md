@@ -65,11 +65,18 @@
 
 ### Sprint learnings
 
-# Se agregó la función para paginar, por alguna razón ya no agarro el archivo de CSS 
+# Se agregó la función para paginar, por alguna razón ya no agarro el archivo de CSS
+# Se instaló testing-library/react
+# Se arreglo lo del CSS de los botones
+# Se configuro de nuevo JEST, ya se puede hacer testing
 
 ### Added
 
 # Archivo pagination.tsx
+# Carpeta para almacenar los archivos de testing
+# Se agrego el archivo movieGrid.test.ts de testing
+# Archivo barStyle.css (para los estilos de las barras de menu y navegacion)
+# Archivo movieStyle.css (para los estilos del grid y poster)
 
 ### Changed
 
@@ -80,4 +87,5 @@
 
 ### Removed
 
-#  
+# Archivos de css (footer, navBar, menuBar, posterMovie y gridMovie)(unifique archivos)
+# footerInfo.tsx (era muy poco codigo)
