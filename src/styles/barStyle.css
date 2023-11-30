@@ -1,0 +1,101 @@
+:root{
+    --azure: #01ABAA;
+    --cream: #DED1C9;
+    --other-blue: #5E83D6;
+    --almost-black: #1B1029;
+    --mint: #6FC2D9;
+    --pink: #D3A3B3;
+    --gold: #CCA059;
+    --purple: #46135C;
+    --violet: #897487;
+    
+    --yellow: #F7D060;
+    --ligth-yellow: #F3E99F;
+    --b: 3px;   /* borde */
+    --s: .15em; /* tamaño de la esquina */
+    --c: #CCA059;
+
+    --lucky: 'Luckiest Guy', cursive;
+    --varela: 'Varela Round', sans-serif;
+}
+
+/* BARRA DE MENUS*/
+img{
+    height: 180px;
+    width: 180px;
+}
+
+h1{
+    font-family: var(--lucky);
+    font-size: 50px;
+    position: relative;
+    margin-left: 200px;
+    margin-top: -150px;
+    color: var(--cream);
+}
+
+select {
+    appearance: none;
+    font-family: var(--varela);
+    font-size: 25px;
+    margin-top: -30px;
+    border-radius: 10px;
+    background-color: var(--cream);
+    color: var(--almost-black);
+}
+
+select option {
+    font-family: var(--varela);
+    font-size: 18px;
+    color: var(--almost-black);
+}
+
+select:hover{
+    background-color: var(--violet);
+}
+
+#menuGender{
+    margin-left: 250px;
+}
+
+#menuOrder{
+    margin-left: 20px;
+}
+
+/* BARRA DE NAVEGACION*/
+.menuNav{
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+}
+
+ .buttons{
+    width: auto;
+    text-decoration: none;
+    font-family: var(--varela);
+    font-weight: bold;
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+    margin: .1em;
+    padding: calc(.05em + var(--s)) calc(.3em + var(--s));
+    color: var(--c);
+    --_p: var(--s);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--c) 0)
+      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .2em;
+}
+
+.buttons:hover,
+.buttons:focus-visible{
+  --_p: 0px;
+  outline-color: var(--c);
+  outline-offset: .05em;
+}
+.buttons:active {
+  background: var(--c);
+  color: #fff;
+}

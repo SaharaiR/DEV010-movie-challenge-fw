@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
-import { getAnimatedMovies } from '../src/connectAPI'
+import { getAnimatedMovies } from '../connectAPI'
 import PosterMovie from '../components/PosterMovie';
-import '../styles/gridMovies.css';
+import '../styles/movieStyle.css';
 
 interface Movie {
     id: string;  
@@ -33,7 +33,8 @@ const GridMovies = ({ page }: GridMoviesProps) => {
               idMovie={movie.id}
               imageURL={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
               nameMovie={movie.title}
-              yearMovie={movie.release_date}  
+              yearMovie={movie.release_date}
+              alt={`Movie poster for ${movie.title}`} // Agregar atributo alt
             />   
           );
         })}

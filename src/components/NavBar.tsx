@@ -1,4 +1,5 @@
-import '../styles/navBar.css';
+//import '../styles/navBar.css';
+import '../styles/barStyle.css';
 
 interface MenuNavProps {
        onFirstPage: () => void;
@@ -22,6 +23,8 @@ interface MenuNavProps {
      }
 
      export default MenuNav;
+
+
 /*const MenuNav = () => {
   return <section className='menuNav'>
        <button id='btnFirst'>Primero</button>

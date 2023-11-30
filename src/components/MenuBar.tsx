@@ -1,6 +1,7 @@
 // import React from 'react';
-import logo from '../src/assets/palmolita.png';
-import '../styles/menuBar.css';
+import logo from '../assets/palmolita.png';
+//import '../styles/menuBar.css';
+import '../styles/barStyle.css';
 
 const MenuBar = () => {
     return <section className = "menuBar">
