@@ -8,6 +8,7 @@ import Pagination from '../src/pagination';
     const [page, setPage] = useState(1); //nuevo
     const [currentPage, setCurrentPage] = useState(1);
     const [selectedGenre, setSelectedGenre] = useState(16);
+    const [selectedOrder, setSelectedOrder] = useState('');
 
     useEffect(() => {
       setCurrentPage(page);
@@ -19,14 +20,16 @@ import Pagination from '../src/pagination';
 
     return (
       <div>
-        <MenuBar changeGenre={setSelectedGenre} />
+        <MenuBar 
+          changeGenre= { setSelectedGenre } 
+          changeOrder= { setSelectedOrder }/>
         <GridMovies 
           page= { page } 
-          genreCode= {selectedGenre}/>
+          genreCode= {selectedGenre }
+          order= { selectedOrder }  />
         <Pagination
-          currentPage={currentPage}
-          onPageChange={handlePageChange} 
-        />
+          currentPage= { currentPage }
+          onPageChange= { handlePageChange } />
         <footer>
           <p>Desarrollado por: ISC Saharai Rodríguez Hernández</p>
         </footer>

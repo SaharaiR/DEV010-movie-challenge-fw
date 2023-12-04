@@ -4,9 +4,10 @@ import { Dispatch, SetStateAction } from 'react';
 
 interface MenuBarProps {
     changeGenre: Dispatch<SetStateAction<number>>;
+    changeOrder: Dispatch<SetStateAction<string>>;
 }
 
-const MenuBar = ({changeGenre}: MenuBarProps) => {
+const MenuBar = ({ changeGenre, changeOrder }: MenuBarProps) => {
     return <section className = "menuBar">
         <img src = {logo}  alt = 'Logo de sitio'></img>
         <h1>Tu sitio de películas animadas</h1>
@@ -28,10 +29,10 @@ const MenuBar = ({changeGenre}: MenuBarProps) => {
             <option value={27}>Terror</option>
             <option value={37}>Western</option>
         </select>
-        <select id='menuOrder' /*onChange = {changeOrder}*/>
-            <option value=''>Ordenar</option>
+        <select id='menuOrder' onChange = {(e) => changeOrder(e.target.value)}>
+            <option value={''}>Ordenar</option>
             <option value={'asc'}>Ascendiente (A-Z)</option>
-            <option value={'des'}>Descendiente (Z-A)</option>
+            <option value={'desc'}>Descendiente (Z-A)</option>
         </select>    
     </section>
 };

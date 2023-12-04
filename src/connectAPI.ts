@@ -9,6 +9,7 @@ interface MovieResponse{
     page: number;
     total_pages: number;
     genreCode: number;
+    order: string;
     results: Movie[];
 }
 
@@ -17,11 +18,19 @@ const options: RequestInit = {
     headers: { 
       'Accept': 'application/json',
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjY2VkYjQyYTU0YzNlZTM2YjJkNTA1ZjU2OWE0Yjk1ZiIsInN1YiI6IjY1NDk5ZmExMWFjMjkyN2IyZWJkNGMyZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.DWG-rxr2n3-luJa-wCFvcJpqIOzaB8g4VfiEem5Nioo'
-     } 
+     }
   };
 
-  export const getAnimatedMovies = (page: number, genreCode: number): Promise<MovieResponse> => {
-    return fetch(`https://api.themoviedb.org/3/discover/movie?with_genres=16,${genreCode}&page=${page}`, options)
+  export const getAnimatedMovies = (page: number, genreCode: number, order: string): Promise<MovieResponse> => {
+    let apiUrl = `https://api.themoviedb.org/3/discover/movie?with_genres=16,${genreCode}&page=${page}`;
+
+  // Agregar el parámetro de orden si se proporciona
+  if (order) {
+    apiUrl += `&sort_by=title.${order}`;
+  }
+    //return fetch(`https://api.themoviedb.org/3/discover/movie?with_genres=16,${genreCode}&page=${page}`, options)
+    //return fetch(`https://api.themoviedb.org/3/discover/movie?with_genres=16,${genreCode}&page=${page}&sort_by=title.${order}`, options)
+  return fetch(apiUrl, options)  
     .then(response => response.json() as unknown as MovieResponse)
     .catch((err: Error) => {
       console.error(err);
@@ -46,4 +55,6 @@ fetch('https://api.themoviedb.org/3/discover/movie?include_adult=false&include_v
     /*export const getAnimatedMovies = (): Promise<MovieResponse> => {
     return fetch(`https://api.themoviedb.org/3/discover/movie?with_genres=16&page=${page}&api_key=${API_KEY}`) 
       .then(response => response.json() as unknown as MovieResponse)
-}*/
+
+sort_by=popularity.desc
+    }*/
