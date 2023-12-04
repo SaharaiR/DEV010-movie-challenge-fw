@@ -1,36 +1,40 @@
-// import React from 'react';
 import logo from '../assets/palmolita.png';
-//import '../styles/menuBar.css';
 import '../styles/barStyle.css';
+import { Dispatch, SetStateAction } from 'react';
 
-const MenuBar = () => {
+interface MenuBarProps {
+    changeGenre: Dispatch<SetStateAction<number>>;
+}
+
+const MenuBar = ({changeGenre}: MenuBarProps) => {
     return <section className = "menuBar">
         <img src = {logo}  alt = 'Logo de sitio'></img>
         <h1>Tu sitio de películas animadas</h1>
-        <select id='menuGender'>
-            <option value={''}>Género</option>
-            <option value={'action'}>Acción</option>
-            <option value={'adventure'}>Aventura</option>
-            <option value={'warlike'}>Bélico</option>
-            <option value={'science'}>Ciencia ficción</option>
-            <option value={'doc'}>Documental</option>
-            <option value={'drama'}>Drama</option>
-            <option value={'family'}>Familia</option>
-            <option value={'fantasy'}>Fantasía</option>
-            <option value={'history'}>Historia</option>
-            <option value={'mistery'}>Misterio</option>
-            <option value={'movieTV'}>Película de TV</option>
-            <option value={'romance'}>Romance</option>
-            <option value={'suspense'}>Suspenso</option>
-            <option value={'terror'}>Terror</option>
-            <option value={'western'}>Western</option>
+        <select id='menuGender' onChange={(e) => changeGenre(Number(e.target.value))}>
+            <option value={16}>Género</option>
+            <option value={28}>Acción</option>
+            <option value={12}>Aventura</option>
+            <option value={10752}>Bélico</option>
+            <option value={878}>Ciencia ficción</option>
+            <option value={99}>Documental</option>
+            <option value={18}>Drama</option>
+            <option value={10751}>Familia</option>
+            <option value={14}>Fantasía</option>
+            <option value={36}>Historia</option>
+            <option value={9648}>Misterio</option>
+            <option value={10770}>Película de TV</option>
+            <option value={10749}>Romance</option>
+            <option value={53}>Suspenso</option>
+            <option value={27}>Terror</option>
+            <option value={37}>Western</option>
         </select>
-        <select id='menuOrder'>
-            <option value={'0'}>Ordenar</option>
-            <option value={'a-z'}>Ascendiente (A-Z)</option>
-            <option value={'z-a'}>Descendiente (Z-A)</option>
+        <select id='menuOrder' /*onChange = {changeOrder}*/>
+            <option value=''>Ordenar</option>
+            <option value={'asc'}>Ascendiente (A-Z)</option>
+            <option value={'des'}>Descendiente (Z-A)</option>
         </select>    
     </section>
 };
 
 export default MenuBar;
+
