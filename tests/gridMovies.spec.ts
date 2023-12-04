@@ -1,6 +1,4 @@
-import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import GridMovies from '../src/components/GridMovies';
 
 jest.mock('../src/connectAPI', () => ({
@@ -18,11 +16,11 @@ jest.mock('../src/connectAPI', () => ({
 }));
 
 describe('GridMovies Component', () => {
-  it('renders movies correctly', async () => {
+  it('renders movies correctly', () => {
     render(<GridMovies page={1} />);
 
     // Wait for the API call to complete and update the component
-    await waitFor(() => {
+    waitFor(() => {
       expect(screen.getByAltText('Movie Title')).toBeInTheDocument();
     });
 

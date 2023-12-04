@@ -75,8 +75,6 @@
 # Archivo pagination.tsx
 # Carpeta para almacenar los archivos de testing
 # Se agrego el archivo movieGrid.test.ts de testing
-# Archivo barStyle.css (para los estilos de las barras de menu y navegacion)
-# Archivo movieStyle.css (para los estilos del grid y poster)
 
 ### Changed
 
@@ -84,6 +82,32 @@
 # Cambié a App.tsx el llamado a la función de paginación (inicialmente estaba en GridMovies.tsx) para dejar solo la lógica de presentar los posters ahí
 
 ### Fixed
+
+### Removed
+
+
+## <0.0.3> - <29/11/2023 - 06/12/2023>
+
+### Sprint learnings
+
+# Mas sobre estados y hooks
+# Funciona ahora los filtros por genero, se respeta junto con la paginación el filtro aplicado.
+
+### Added
+
+# Archivo barStyle.css (para los estilos de las barras de menu y navegacion)
+# Archivo movieStyle.css (para los estilos del grid y poster)
+
+### Changed
+
+# Cambio el archivo App.tsx (aqui va el reconocimiento de cambio de estado para el menu de filtro)
+# Cambio el archivo MenuBar.tsx se agrego la interfaz para el cambio en el menu
+# Cambio el archivo GridMovies.tsx ya que de aqui se manda llamar la funcion de conectividad a la API para enviar los parametros de los generos escogidos.
+# Cambio el archivo connectAPI, ahora recibe el parametro del genero escogido (se hace una combinación del genero por default, que son las animadas, y  el genero del cual se quiere filtrar)
+
+### Fixed
+
+# No se ha arreglado para realizar testing
 
 ### Removed
 

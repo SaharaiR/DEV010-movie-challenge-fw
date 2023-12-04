@@ -8,6 +8,7 @@ interface Movie {
 interface MovieResponse{
     page: number;
     total_pages: number;
+    genreCode: number;
     results: Movie[];
 }
 
@@ -19,8 +20,8 @@ const options: RequestInit = {
      } 
   };
 
-  export const getAnimatedMovies = (page: number): Promise<MovieResponse> => {
-    return fetch(`https://api.themoviedb.org/3/discover/movie?with_genres=16&page=${page}`, options)
+  export const getAnimatedMovies = (page: number, genreCode: number): Promise<MovieResponse> => {
+    return fetch(`https://api.themoviedb.org/3/discover/movie?with_genres=16,${genreCode}&page=${page}`, options)
     .then(response => response.json() as unknown as MovieResponse)
     .catch((err: Error) => {
       console.error(err);

@@ -7,6 +7,7 @@ import Pagination from '../src/pagination';
   const App: React.FC = () => {
     const [page, setPage] = useState(1); //nuevo
     const [currentPage, setCurrentPage] = useState(1);
+    const [selectedGenre, setSelectedGenre] = useState(16);
 
     useEffect(() => {
       setCurrentPage(page);
@@ -15,10 +16,13 @@ import Pagination from '../src/pagination';
     function handlePageChange(nextPage: number) {
       setPage(nextPage);
     }
+
     return (
       <div>
-        <MenuBar/ >
-        <GridMovies page={page}/ >
+        <MenuBar changeGenre={setSelectedGenre} />
+        <GridMovies 
+          page= { page } 
+          genreCode= {selectedGenre}/>
         <Pagination
           currentPage={currentPage}
           onPageChange={handlePageChange} 

@@ -1,4 +1,3 @@
-//import '../styles/navBar.css';
 import '../styles/barStyle.css';
 
 interface MenuNavProps {
@@ -23,15 +22,3 @@ interface MenuNavProps {
      }
 
      export default MenuNav;
-
-
-/*const MenuNav = () => {
-  return <section className='menuNav'>
-       <button id='btnFirst'>Primero</button>
-       <button id='btnBefore'>Anterior</button>
-       <button id='btnNext'>Siguiente</button>
-       <button id='btnLast'>Último</button>
-    </section>
-}
-
-export default MenuNav;*/
