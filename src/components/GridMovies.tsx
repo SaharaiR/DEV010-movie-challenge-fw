@@ -13,17 +13,19 @@ interface Movie {
 interface GridMoviesProps{
   page: number;
   genreCode: number;
+  order: string;
 }
 
-const GridMovies = ({ page , genreCode }: GridMoviesProps) => {
+const GridMovies = ({ page, genreCode, order }: GridMoviesProps) => {
+    //console.log(order);
     const [movies, setMovies] = useState<Movie[]>([]);
 
       useEffect(() => {
-        getAnimatedMovies(page, genreCode)
+        getAnimatedMovies(page, genreCode, order)
           .then(data => {
             setMovies(data.results); 
           })
-      }, [page, genreCode]);
+      }, [page, genreCode, order]);
 
     return (
       <div className='gridMovies'>
