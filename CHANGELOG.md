@@ -121,16 +121,18 @@
 ### Sprint learnings
 
 # Se creo segunda vista del detalle de película
+# Se direccionó el botón de "regresar" al home
+# Se muestra la pelicula en la cuál se da click
 
 ### Added
 
 # Archivo DetailMovie.tsx, contiene el componente del detalle de la pelicula y la función para traer la información de la API
 # Se instaló ReactRouter para hacer el enrutamiento entre las vistas
+# Archivo de iconPalomitas en carpeta /assets
 
 ### Changed
 
 # Cambio el archivo movieStyle.css se agregaron los estilos para detailMovie
-
 
 ### Fixed
 

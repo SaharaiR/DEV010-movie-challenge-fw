@@ -20,12 +20,12 @@
 }
 
 /* BARRA DE MENUS*/
-img{
+.imgHome{
     height: 180px;
     width: 180px;
 }
 
-h1{
+.h1Home{
     font-family: var(--lucky);
     font-size: 50px;
     position: relative;

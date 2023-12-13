@@ -7,6 +7,25 @@
     --pink: #D3A3B3;
     --gold: #CCA059;
     --purple: #46135C;
+    --lucky: 'Luckiest Guy', cursive;
+}
+
+.imgMovieDetails{
+    height: 160px;
+    width: 160px;
+}
+
+.h1MovieDetails{
+    font-family: var(--lucky);
+    font-size: 45px;
+    position: relative;
+    margin-left: 200px;
+    margin-top: -125px;
+    color: var(--cream);
+}
+
+.buttonArea{
+    margin-top: -20px;
 }
 
 .posterMovie{
@@ -31,7 +50,7 @@
     gap: 20px;
 }
 
-.buttonArea{
+.btnBack{
     /*text-align: left;*/
     margin-top: 30px;
     margin-left: 100px;
@@ -48,7 +67,7 @@
     height: 70px;
 }
 
-.buttonTitle{
+.btnTitle{
     font-size: 30px;
     margin-left: 10px;
     font-weight: bold;
@@ -94,4 +113,11 @@
 .tagline{
     margin-top: 40px;
     margin-bottom: 40px;
+}
+
+.iconPopcorn{
+    background-size: cover;
+    border: none;
+    height: 18px;
+    width: 18px;
 }

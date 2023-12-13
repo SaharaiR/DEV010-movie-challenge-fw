@@ -1,11 +1,15 @@
 import { useState, useEffect } from "react";
+import iconPalomita from '../assets/iconPalomitas.png';
+import logo from '../assets/palmolita.png';
+import { useParams, Link } from 'react-router-dom';
 import '../styles/movieStyle.css';
 
-interface DetailMovieProps {
+/*interface DetailMovieProps {
     idMovie: string;
-}
+}*/
 
 interface MovieDetails{
+    id: string;
     poster_path: string;
     altImg: string;
     original_title: string;
@@ -23,33 +27,50 @@ const options: RequestInit = {
      }
   };
 
-function DetailMovie({ idMovie }: DetailMovieProps){
+//function DetailMovie({ idMovie }: DetailMovieProps){
+function DetailMovie(){
+    const movieID = useParams<{idMovie: string}>();
     const [details, setDetails] = useState<MovieDetails | null>(null);//[]>([]);
 
+    const idMovieAsString = movieID && typeof movieID === 'object' ? movieID.idMovie : movieID;
+    //console.log(idMovieAsString);
+
     useEffect(() => {
-        getDetailMovie(Number(idMovie))
+        getDetailMovie(Number(idMovieAsString))
             .then(data => {
                 setDetails(data);
             })
-        }, [idMovie]);
+        }, [idMovieAsString]);
 
     //console.log(details?.genres);
     const genresNames = details?.genres.map(genre => genre.name);
     return (
         <div className="viewMovieDetails">
-            <section>
-                <button className="buttonArea"></button>
-                <span className="buttonTitle">Regresar</span>
+            <section className="headerArea">
+                <img src = {logo}  alt = 'Logo de sitio' className="imgMovieDetails"></img>
+                <h1 className="h1MovieDetails">Tu sitio de películas animadas</h1>
+            </section>
+            <section className="buttonArea">
+                <Link to='/'>
+                    <button className="btnBack"></button>
+                </Link>
+                <span className="btnTitle">Regresar</span>
             </section>
             <section className="movieDetailGrid">
                 <picture className="poster">
-                    <img id={idMovie} src = {`https://image.tmdb.org/t/p/w500${details?.poster_path}`} 
+                    <img id={details?.id} src = {`https://image.tmdb.org/t/p/w500${details?.poster_path}`} 
                     alt= {`Movie poster for ${details?.original_title}`} className="poster"/>
                 </picture>
                 <div className="sumarize">
                     <p className="title"> { details?.original_title }</p>
-                    <p className="year">&#127839; ​{ details?.release_date.split('-')[0] }</p>
-                    <p className="genres">&#127839; ​{ genresNames?.join(', ') } </p>
+                    <p className="year">
+                        <img className="iconPopcorn" src= {iconPalomita} alt='Icono de Palomitas'></img>
+                        ​{ details?.release_date.split('-')[0] }
+                    </p>
+                    <p className="genres">
+                        <img className="iconPopcorn" src= {iconPalomita} alt='Icono de Palomitas'></img>
+                        ​{ genresNames?.join(', ') } 
+                    </p>
                     <p className="tagline">{ details?.tagline }</p>
                     <p className="overview">Resumen: { details?.overview }</p>
                 </div>
@@ -58,9 +79,9 @@ function DetailMovie({ idMovie }: DetailMovieProps){
     )
 }
 
-const getDetailMovie = ( movieId: number ): Promise<MovieDetails/*DetailResponse*//*{results: MovieDetails[]}*/> => {
+const getDetailMovie = ( movieId: number ): Promise<MovieDetails> => {
     return fetch(`https://api.themoviedb.org/3/movie/${movieId}?language=es-ES`, options)
-        .then(response => response.json() as unknown as MovieDetails/*as unknown as DetailResponse*/)
+        .then(response => response.json() as unknown as MovieDetails)
         .catch((err: Error) => {
             console.error(err);
             return Promise.reject(err);
@@ -68,3 +89,5 @@ const getDetailMovie = ( movieId: number ): Promise<MovieDetails/*DetailResponse
   }
 
 export default DetailMovie;
+
+//codigo icono HTML palomita: &#127871;
