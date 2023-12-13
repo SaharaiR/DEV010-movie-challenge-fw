@@ -139,3 +139,5 @@
 # No se ha arreglado para realizar testing
 
 ### Removed
+
+# Se borraron los archivos seed.ico y cornPop.ico
