@@ -32,7 +32,7 @@ const MenuBar = ({ changeGenre, changeOrder }: MenuBarProps) => {
         <select id='menuOrder' onChange = {(e) => changeOrder(e.target.value)}>
             <option value={''}>Ordenar</option>
             <option value={'asc'}>Ascendiente (A-Z)</option>
-            <option value={'desc'}>Descendiente (Z-A)</option>
+            <option value={'des'}>Descendiente (Z-A)</option>
         </select>    
     </section>
 };
