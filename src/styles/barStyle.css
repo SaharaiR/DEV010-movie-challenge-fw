@@ -99,3 +99,9 @@ select:hover{
   background: var(--c);
   color: #fff;
 }
+
+.footer{
+    text-align: right;
+    font-size: small;
+    color: var(--gold);
+}

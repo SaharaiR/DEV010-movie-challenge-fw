@@ -92,6 +92,7 @@
 
 # Mas sobre estados y hooks
 # Funciona ahora los filtros por genero, se respeta junto con la paginación el filtro aplicado.
+# Funciona ahora el ordenamiento alfabetico en base al título de la película
 
 ### Added
 
@@ -104,6 +105,7 @@
 # Cambio el archivo MenuBar.tsx se agrego la interfaz para el cambio en el menu
 # Cambio el archivo GridMovies.tsx ya que de aqui se manda llamar la funcion de conectividad a la API para enviar los parametros de los generos escogidos.
 # Cambio el archivo connectAPI, ahora recibe el parametro del genero escogido (se hace una combinación del genero por default, que son las animadas, y  el genero del cual se quiere filtrar)
+# Cambio el archivo connectAPI, ahora recibe el parametro del orden escogido alfabeticamente
 
 ### Fixed
 
@@ -113,3 +115,25 @@
 
 # Archivos de css (footer, navBar, menuBar, posterMovie y gridMovie)(unifique archivos)
 # footerInfo.tsx (era muy poco codigo)
+
+## <0.0.4> - <07/12/2023 - 13/12/2023>
+
+### Sprint learnings
+
+# Se creo segunda vista del detalle de película
+
+### Added
+
+# Archivo DetailMovie.tsx, contiene el componente del detalle de la pelicula y la función para traer la información de la API
+# Se instaló ReactRouter para hacer el enrutamiento entre las vistas
+
+### Changed
+
+# Cambio el archivo movieStyle.css se agregaron los estilos para detailMovie
+
+
+### Fixed
+
+# No se ha arreglado para realizar testing
+
+### Removed

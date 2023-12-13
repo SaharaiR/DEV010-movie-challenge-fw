@@ -1,4 +1,3 @@
-// import React from 'react';
 import '../styles/movieStyle.css';
 
 interface MovieProps{
@@ -7,7 +6,10 @@ interface MovieProps{
   nameMovie: string;
   yearMovie: string;
   alt: string;
+  //onClick: string;
 }
+
+//const [selectedMovie, setSelectedMovie] = useState('');
 
 function PosterMovie({idMovie, imageURL, nameMovie, yearMovie, alt} : MovieProps) {
       return (

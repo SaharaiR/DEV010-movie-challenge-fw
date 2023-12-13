@@ -7,7 +7,7 @@ interface Movie {
 
 interface MovieResponse{
     page: number;
-    total_pages: number;
+    //total_pages: number;
     genreCode: number;
     order: string;
     results: Movie[];
@@ -24,7 +24,8 @@ const options: RequestInit = {
   export const getAnimatedMovies = (page: number, genreCode: number, order: string): Promise<MovieResponse> => {
     let apiUrl = `https://api.themoviedb.org/3/discover/movie?with_genres=16,${genreCode}&page=${page}`;
 
-  // Agregar el parámetro de orden si se proporciona
+  /* Agregar el parámetro de orden si se proporciona, 
+  igual no es taaan necesario, me hacia ruido que no me mostrara las que vi siempre al inicio XD */
   if (order) {
     apiUrl += `&sort_by=title.${order}`;
   }
@@ -37,24 +38,3 @@ const options: RequestInit = {
       return Promise.reject(err);
     });
   }
-    /*const options = {
-  method: 'GET',
-  headers: {
-    accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjY2VkYjQyYTU0YzNlZTM2YjJkNTA1ZjU2OWE0Yjk1ZiIsInN1YiI6IjY1NDk5ZmExMWFjMjkyN2IyZWJkNGMyZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.DWG-rxr2n3-luJa-wCFvcJpqIOzaB8g4VfiEem5Nioo'
-  }
-};
-
-fetch('https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc', options)
-  .then(response => response.json())
-  .then(response => console.log(response))
-  .catch(err => console.error(err)); */
-
-
-
-    /*export const getAnimatedMovies = (): Promise<MovieResponse> => {
-    return fetch(`https://api.themoviedb.org/3/discover/movie?with_genres=16&page=${page}&api_key=${API_KEY}`) 
-      .then(response => response.json() as unknown as MovieResponse)
-
-sort_by=popularity.desc
-    }*/
