@@ -9,8 +9,8 @@ interface MenuBarProps {
 
 const MenuBar = ({ changeGenre, changeOrder }: MenuBarProps) => {
     return <section className = "menuBar">
-        <img src = {logo}  alt = 'Logo de sitio'></img>
-        <h1>Tu sitio de películas animadas</h1>
+        <img src = {logo}  alt = 'Logo de sitio' className='imgHome'></img>
+        <h1 className='h1Home'>Tu sitio de películas animadas</h1>
         <select id='menuGender' onChange={(e) => changeGenre(Number(e.target.value))}>
             <option value={16}>Género</option>
             <option value={28}>Acción</option>

@@ -7,40 +7,24 @@ import Pagination from '../src/pagination';
 import DetailMovie from './components/DetailMovie';
 
   const App: React.FC = () => {
-    //const [page, setPage] = useState(1); //nuevo
     const [currentPage, setCurrentPage] = useState(1);
     const [selectedGenre, setSelectedGenre] = useState(16);
     const [selectedOrder, setSelectedOrder] = useState('');
-    //const [showDetail, setShowDetail] = useState(false);
-    //const [selectedMovieId, setSelectedMovieId] = useState('');
-
-    /*useEffect(() => {
-      //console.log("dentro del efecto");
-      setCurrentPage(page);
-    }, [page]);*/
-
+    
     function handlePageChange(nextPage: number) {
-      //setPage(nextPage);
       setCurrentPage(nextPage);
     }
-
-    /*const toggleDetail = () => {
-      setShowDetail(!showDetail);
-    };  
-    const handleMovieClick = (movieId: string) => {
-      setSelectedMovieId(movieId);
-    };*/
 
     return (
       <Router>
         <div>
-          <MenuBar 
-            changeGenre= { setSelectedGenre } 
-            changeOrder= { setSelectedOrder }
-          />
           <Routes>
             <Route path='/' element={
               <div>
+                <MenuBar 
+                  changeGenre= { setSelectedGenre } 
+                  changeOrder= { setSelectedOrder }
+                />
                 <GridMovies 
                   page= { currentPage } 
                   genreCode= {selectedGenre }
@@ -51,8 +35,8 @@ import DetailMovie from './components/DetailMovie';
                   onPageChange= { handlePageChange } 
                 />
               </div>
-            }/>  
-            <Route path='/detail/:569094' element={ <DetailMovie idMovie='569094' />} />
+            }/>
+            <Route path="/detail/:idMovie" element={<DetailMovie />} />
           </Routes>
           <footer className='footer'>
             <p>Desarrollado por: ISC Saharai Rodríguez Hernández</p>
@@ -65,3 +49,4 @@ import DetailMovie from './components/DetailMovie';
   export default App;
 
   //<DetailMovie idMovie='502356'/>
+  //<Route path='/detail/:569094' element={ <DetailMovie idMovie='569094' />} />
