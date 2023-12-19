@@ -141,3 +141,25 @@
 ### Removed
 
 # Se borraron los archivos seed.ico y cornPop.ico
+
+## <0.0.5> - <14/12/2023 - 20/12/2023>
+
+### Sprint learnings
+
+# Se presento la calificación redondeada.
+
+### Added
+
+# Se agrego archivo de iconAverage.
+
+### Changed
+
+# 
+
+### Fixed
+
+# 
+
+### Removed
+
+# 
