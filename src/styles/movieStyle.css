@@ -88,6 +88,23 @@
     height: 425px;
 }
 
+.iconAverage{
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    margin-left: 300px;
+    margin-top: 360px;
+}
+
+.average{
+    position: absolute;
+    margin-left: 338px;
+    margin-top: 400px;
+    font-size: 26px;
+    color: var(--purple);
+}
+
+
 .sumarize{
     text-align: justify;
 }

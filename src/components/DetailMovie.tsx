@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import iconPalomita from '../assets/iconPalomitas.png';
+import iconAverage from '../assets/ticketAverage.png'
 import logo from '../assets/palmolita.png';
 import { useParams, Link } from 'react-router-dom';
 import '../styles/movieStyle.css';
@@ -15,6 +16,8 @@ interface MovieDetails{
     original_title: string;
     release_date: string;
     genres: []; /*"genres": [{"id": 16,"name": "Animación"},{"id": 10751,"name": "Familia"},*/
+    vote_average: number;
+    vote_count: number;
     tagline: string;
     overview: string;
 }
@@ -44,6 +47,7 @@ function DetailMovie(){
 
     //console.log(details?.genres);
     const genresNames = details?.genres.map(genre => genre.name);
+    const average = details?.vote_average;
     return (
         <div className="viewMovieDetails">
             <section className="headerArea">
@@ -57,20 +61,25 @@ function DetailMovie(){
                 <span className="btnTitle">Regresar</span>
             </section>
             <section className="movieDetailGrid">
+                <img className="iconAverage" src={iconAverage} alt='Icono de Vaso de Palomitas'></img>
+                <p className="average">{average?.toFixed(1)}</p>
                 <picture className="poster">
                     <img id={details?.id} src = {`https://image.tmdb.org/t/p/w500${details?.poster_path}`} 
                     alt= {`Movie poster for ${details?.original_title}`} className="poster"/>
                 </picture>
                 <div className="sumarize">
-                    <p className="title"> { details?.original_title }</p>
+                    <p className="title"> 
+                        { details?.original_title }
+                    </p>
                     <p className="year">
-                        <img className="iconPopcorn" src= {iconPalomita} alt='Icono de Palomitas'></img>
-                        ​{ details?.release_date.split('-')[0] }
+                        <img className="iconPopcorn" src={iconPalomita} alt='Icono de Palomitas'></img>
+                        {details?.release_date.split('-')[0]}
                     </p>
                     <p className="genres">
-                        <img className="iconPopcorn" src= {iconPalomita} alt='Icono de Palomitas'></img>
-                        ​{ genresNames?.join(', ') } 
+                        <img className="iconPopcorn" src={iconPalomita} alt='Icono de Palomitas'></img>
+                        {genresNames?.join(', ')}
                     </p>
+                    <p className="votes"> </p>
                     <p className="tagline">{ details?.tagline }</p>
                     <p className="overview">Resumen: { details?.overview }</p>
                 </div>
@@ -91,3 +100,4 @@ const getDetailMovie = ( movieId: number ): Promise<MovieDetails> => {
 export default DetailMovie;
 
 //codigo icono HTML palomita: &#127871;
+//Calificación: {average?.toFixed(1)} Votos: {details?.vote_count}
