@@ -2,12 +2,9 @@ import { useState, useEffect } from "react";
 import iconPalomita from '../assets/iconPalomitas.png';
 import iconAverage from '../assets/ticketAverage.png'
 import logo from '../assets/palmolita.png';
+import bright  from '../assets/bright.png';
 import { useParams, Link } from 'react-router-dom';
 import '../styles/movieStyle.css';
-
-/*interface DetailMovieProps {
-    idMovie: string;
-}*/
 
 interface MovieDetails{
     id: string;
@@ -30,7 +27,6 @@ const options: RequestInit = {
      }
   };
 
-//function DetailMovie({ idMovie }: DetailMovieProps){
 function DetailMovie(){
     const movieID = useParams<{idMovie: string}>();
     const [details, setDetails] = useState<MovieDetails | null>(null);//[]>([]);
@@ -52,6 +48,7 @@ function DetailMovie(){
         <div className="viewMovieDetails">
             <section className="headerArea">
                 <img src = {logo}  alt = 'Logo de sitio' className="imgMovieDetails"></img>
+                <img src = {bright} className="imgBright"></img>
                 <h1 className="h1MovieDetails">Tu sitio de películas animadas</h1>
             </section>
             <section className="buttonArea">

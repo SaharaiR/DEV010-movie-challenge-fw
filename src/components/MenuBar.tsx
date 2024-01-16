@@ -1,4 +1,5 @@
 import logo from '../assets/palmolita.png';
+import bright from '../assets/bright.png';
 import '../styles/barStyle.css';
 import { Dispatch, SetStateAction } from 'react';
 
@@ -10,6 +11,7 @@ interface MenuBarProps {
 const MenuBar = ({ changeGenre, changeOrder }: MenuBarProps) => {
     return <section className = "menuBar">
         <img src = {logo}  alt = 'Logo de sitio' className='imgHome'></img>
+        <img src = {bright} className='bright'></img>
         <h1 className='h1Home'>Tu sitio de películas animadas</h1>
         <select id='menuGender' onChange={(e) => changeGenre(Number(e.target.value))}>
             <option value={16}>Género</option>
