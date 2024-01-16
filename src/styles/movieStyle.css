@@ -24,6 +24,13 @@
     color: var(--cream);
 }
 
+.imgBright{
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    margin-left: 900px;
+}
+
 .buttonArea{
     margin-top: -20px;
 }
@@ -51,7 +58,6 @@
 }
 
 .btnBack{
-    /*text-align: left;*/
     margin-top: 30px;
     margin-left: 100px;
     background-image: url('../assets/buttonBack.png');

@@ -20,6 +20,13 @@
 }
 
 /* BARRA DE MENUS*/
+.bright{
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    margin-left: 900px;
+}
+
 .imgHome{
     height: 180px;
     width: 180px;
