@@ -1,11 +1,10 @@
 {
-    "version": 2,
-    "builds": [
-      { "src": "package.json", "use": "@vercel/node" },
-      { "src": "build/**", "use": "@vercel/static" }
-    ],
-    "routes": [
-      { "handle": "filesystem" },
-      { "src": "/.*", "dest": "main.tsx" }
-    ]
-  }
+  "version": 2,
+  "builds": [
+    { "src": "src/main.tsx", "use": "@vercel/node" },
+    { "src": "build/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/(.*?)", "dest": "/src/main.tsx" }
+  ]
+}
