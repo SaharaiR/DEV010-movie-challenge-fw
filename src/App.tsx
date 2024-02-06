@@ -3,7 +3,7 @@ import {useState} from 'react';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import MenuBar from './components/MenuBar';
 import GridMovies from './components/GridMovies';
-import Pagination from '../src/pagination';
+import Pagination from './pagination';
 import DetailMovie from './components/DetailMovie';
 
   const App: React.FC = () => {
