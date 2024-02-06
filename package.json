@@ -2,7 +2,7 @@
   "name": "movie-challenge",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/SaharaiR/DEV010-movie-challenge-fw",
+  "homepage": "https://saharair.github.io/DEV010-movie-challenge-fw/",
   "type": "module",
   "proxy": "https://api.themoviedb.org/3",
   "scripts": {
