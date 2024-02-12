@@ -6,13 +6,18 @@ import bright  from '../assets/bright.png';
 import { useParams, Link } from 'react-router-dom';
 import '../styles/movieStyle.css';
 
+interface Genre{
+    id:  number;
+    name: string;
+}
+
 interface MovieDetails{
     id: string;
     poster_path: string;
     altImg: string;
     original_title: string;
     release_date: string;
-    genres: []; /*"genres": [{"id": 16,"name": "Animación"},{"id": 10751,"name": "Familia"},*/
+    genres: Genre[]; /*"genres": [{"id": 16,"name": "Animación"},{"id": 10751,"name": "Familia"},*/
     vote_average: number;
     vote_count: number;
     tagline: string;
@@ -42,7 +47,7 @@ function DetailMovie(){
         }, [idMovieAsString]);
 
     //console.log(details?.genres);
-    const genresNames = details?.genres.map(genre => genre.name);
+    const genresNames = details?.genres.map(genre => genre.name) || [];
     const average = details?.vote_average;
     return (
         <div className="viewMovieDetails">
